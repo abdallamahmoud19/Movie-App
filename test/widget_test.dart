@@ -7,8 +7,12 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+<<<<<<< HEAD
 
 import 'package:movie_app/main.dart';
+=======
+import 'package:untitled7/main.dart';
+>>>>>>> 3048b36 (edited)
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {

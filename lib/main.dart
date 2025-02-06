@@ -1,12 +1,41 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 
 void main() {
   runApp(const MyApp());
+=======
+import 'package:provider/provider.dart';
+
+
+import 'package:untitled7/screens/home_screen/home_screen.dart';
+import 'package:untitled7/screens/login/login_screen.dart';
+import 'package:untitled7/screens/onbording/onbording_screen.dart';
+
+import 'package:untitled7/screens/reset_password_screen/reset_password_screen.dart';
+import 'package:untitled7/screens/update_profile/update_profile_screen.dart';
+import 'package:untitled7/splash_screen.dart';
+import 'package:untitled7/viewmodels/auth_viewmodel.dart';
+
+import 'package:untitled7/viewmodels/register_viewmodel.dart';
+import 'package:untitled7/views/register_screen.dart';
+
+void main() {
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => AuthViewModel()),
+        ChangeNotifierProvider(create: (_) => RegisterViewModel()),
+      ],
+      child: const MyApp(),
+    ),
+  );
+>>>>>>> 3048b36 (edited)
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
+<<<<<<< HEAD
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -120,6 +149,22 @@ class _MyHomePageState extends State<MyHomePage> {
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
+=======
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      initialRoute: SplashScreen.routeName,
+      routes: {
+        SplashScreen.routeName: (context) => SplashScreen(),
+        HomeScreen.routeName: (context) => HomeScreen(),
+        LoginScreen.routeName: (context) => LoginScreen(),
+        RegisterScreen.routeName: (context) => RegisterScreen(),
+        ResetPasswordScreen.routeName: (context) => ResetPasswordScreen(),
+        UpdateProfileScreen.routeName: (context) => UpdateProfileScreen(),
+        OnboardingScreen.routeName: (context) => OnboardingScreen(),
+      },
+>>>>>>> 3048b36 (edited)
     );
   }
 }
